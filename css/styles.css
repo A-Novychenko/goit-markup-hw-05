@@ -1,0 +1,609 @@
+:root {
+    /* title */
+    --primary-color: #212121;
+    /* paragraph */
+    --secondary-color: #757575;
+    --accent-color: #2196F3;
+    /* logo  */
+    --black-color: #000000;
+    /* logo-footer, hero, main-bgc */
+    --white-color: #FFFFFF;
+    /* footer-mail-phone */
+    --white-transparent-color: rgba(255, 255, 255, 0.6);
+    /* btn-bgc, team-bgc */
+    --bgc-gray: #F5F4FA;
+    /* footer-bgc*/
+    --bgc-footer: #2F303A;
+    /* !!! variable names are not ideal. replace if necessary */
+}
+
+body {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    cursor: pointer;
+    letter-spacing: inherit;
+    text-align: center;
+
+}
+
+.btn.primary {
+    min-width: 200px;
+    padding: 10px;
+
+    background-color: var(--accent-color);
+    color: var(--white-color);
+
+}
+
+.btn.secondary {
+    padding: 6px 22px;
+
+    background-color: var(--bgc-gray);
+    color: var(--primary-color);
+
+}
+
+.btn.secondary:hover,
+.btn.secondary:focus {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+}
+
+/* /////////////STUDIO///////////// */
+
+/* =============header==============*/
+
+.page-header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav .link.current {
+    color: var(--accent-color);
+}
+
+.site-nav-list {
+    display: flex;
+    margin-left: 93px;
+}
+
+.site-nav-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.site-nav-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--primary-color);
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.logo {
+    color: var(--black-color);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+}
+
+.logo-header {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.logo-accent {
+    color: var(--accent-color);
+}
+
+.contacts-header {
+    display: flex;
+    margin-left: auto;
+}
+
+.contacts-header-link {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--secondary-color);
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.contacts-header-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.page-header .link:hover:not(.logo.link),
+.page-header .link:focus:not(.logo.link) {
+    color: var(--accent-color);
+}
+
+.header-icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+/* =============/header==============*/
+
+
+/* ===============main===============*/
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.section .section-text {
+    color: var(--secondary-color);
+}
+
+.title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+/* ===============hero===============*/
+.hero {
+    max-width: 1600px;
+    height: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    /* фон якщо не завант. зобр. */
+    background-color: #C4C4C4;
+    /* фон-зображення+"затемнення" градієнтом */
+    background-image:
+        linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url("../images/hero-bg.jpg");
+    background-size: cover;
+    /* на майбутнє, 
+        для заміни зображень 
+        з іншими параметрами */
+    background-position: center;
+
+    color: var(--white-color);
+    text-align: center;
+}
+
+.title-hero {
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 696px;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.btn-hero {
+    font-weight: 700;
+    font-size: 16px;
+
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+}
+
+/* active - indicated in the layout */
+/* .btn-hero:hover, 
+.btn-hero:focus, */
+.btn-hero:active {
+    background-color: #188CE8;
+}
+
+/* ==============/hero===============*/
+
+/* =============features=============*/
+.features-list {
+    display: flex;
+    /* flex-wrap: wrap; - на майбутнє,
+    для переносу на інший рядок
+    якщо додадуться такі ж елементи */
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.features-item {
+    flex-basis: calc((100% - 90px) / 4);
+}
+
+.features-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: var(--bgc-gray);
+    border-radius: 4px;
+}
+
+.features-title {
+    margin-bottom: 10px;
+
+    font-size: inherit;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.features .section-text {
+    line-height: 1.71;
+}
+
+/* ============/features=============*/
+
+/* ===============work===============*/
+.work {
+    padding-top: 0;
+}
+
+.work-list {
+    display: flex;
+    /* flex-wrap: wrap; - на майбутнє,
+    для переносу на інший рядок
+    якщо додадуться такі ж елементи */
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* ==============/work===============*/
+
+/* ===============team===============*/
+.team {
+    background-color: var(--bgc-gray);
+}
+
+.team-list {
+    display: flex;
+    /* flex-wrap: wrap; - на майбутнє,
+    для переносу на інший рядок
+    якщо додадуться такі ж елементи */
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.team-item {
+    flex-basis: calc((100% - 90px) / 4);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    background-color: var(--white-color);
+}
+
+.team-item-text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    text-align: center;
+}
+
+.team-name {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+}
+
+.team .section-text {
+    font-size: 16px;
+    line-height: 1.19;
+}
+
+.team-text-job {
+    margin-bottom: 16px;
+}
+
+.social-net-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.social-net-link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.social-net-icon {
+    fill: #AFB1B8;
+}
+
+.social-net-link:hover,
+.social-net-link:focus {
+    background-color: var(--accent-color);
+}
+
+.social-net-link:hover .social-net-icon,
+.social-net-link:focus .social-net-icon {
+    fill: var(--white-color);
+}
+
+/* ==============/team===============*/
+
+/* ===============clients===============*/
+.clients-list {
+    display: flex;
+    column-gap: 30px;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.clients-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    /* Або можна зробити 
+    padding: 16px 32px;
+    але, памятаю десь з лекції, 
+    що не бажано розширювати посиланням
+    батьківський елемент */
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+
+.clients-icon {
+    fill: #AFB1B8;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+    border-color: var(--accent-color);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+    fill: var(--accent-color);
+}
+
+
+/* ==============/clients===============*/
+
+/* ==============/main===============*/
+
+
+/* ==============footer==============*/
+.page-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: var(--bgc-footer);
+}
+
+.footer-position {
+    display: flex;
+    align-items: baseline;
+}
+
+.logo-footer {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    color: var(--white-color);
+}
+
+.address-footer {
+    font-style: normal;
+}
+
+.contacts-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.address-link {
+    color: var(--white-color);
+}
+
+.contacts-footer {
+    color: var(--white-transparent-color);
+    line-height: 1.71;
+}
+
+.contacts-footer:hover,
+.contacts-footer:focus {
+    color: var(--accent-color);
+}
+
+.social-net-footer {
+    margin-left: 70px;
+}
+
+.social-net-footer-title {
+    margin-bottom: 20px;
+    font-size: inherit;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+.social-net-footer-title>strong {
+    font-weight: 700;
+}
+
+.footer-social-net-link {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-net-icon {
+    fill: var(--white-color);
+}
+
+
+/* ==============/footer==============*/
+
+/* ///////////  /STUDIO  /////////// */
+
+
+
+
+/* /////////////PORTFOLIO///////////// */
+
+/* ================filter============= */
+.portfolio-filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    gap: 8px;
+}
+
+.portfolio-filter .btn.current {
+    padding: 6px 25px;
+
+    background-color: var(--accent-color);
+    color: var(--white-color);
+}
+
+.portfolio-filter .btn:hover,
+.portfolio-filter .btn:focus {
+    box-shadow:
+        0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============/filter============= */
+
+/* =================card============== */
+.portfolio-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+.portfolio-link {
+    color: inherit;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+    display: block;
+    box-shadow:
+        0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-card-text {
+    padding: 20px 24px;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+}
+
+.portfolio-title {
+    margin-bottom: 4px;
+
+    color: inherit;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.portfolio-text {
+    color: var(--secondary-color);
+    font-size: 16px;
+    line-height: 1.88;
+}
+
+/* ================/card============== */
+
+/* /////////   /PORTFOLIO   ////////// */

@@ -354,7 +354,7 @@ img {
     position: relative;
 }
 
-.work-item-title {
+.work-item-name {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -366,6 +366,7 @@ img {
     height: 70px;
     background-color: rgba(47, 48, 58, 0.8);
 
+    font-weight: 700;
     line-height: 1.14;
     text-align: center;
     text-transform: uppercase;
@@ -546,6 +547,7 @@ img {
 }
 
 .social-net-footer-title {
+    display: block;
     margin-bottom: 20px;
     font-size: inherit;
     line-height: 1.14;
